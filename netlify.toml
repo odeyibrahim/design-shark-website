@@ -1,0 +1,41 @@
+[build]
+  publish = "."
+  command = "echo 'No build required'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com 'unsafe-inline';
+      style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
+      img-src 'self' data: https://erectmitten.s6-tastewp.com https://plus.unsplash.com https://i.pinimg.com https://upload.wikimedia.org;
+      font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+      connect-src 'self';
+      media-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      frame-ancestors 'none';
+    """
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "preview"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
