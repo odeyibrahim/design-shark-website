@@ -1,593 +1,2468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Design Shark International | From Thread to Technology</title>
-    <meta name="description" content="Revolutionizing African fashion through technology. AI body measurement, smart manufacturing, and fashion education across Africa.">
-    <meta name="keywords" content="African fashion, fashion technology, AI measurement, smart manufacturing, fashion education, Nigeria fashion">
-    <meta name="author" content="Design Shark International">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://designsharkinternational.com/">
-    <meta property="og:title" content="Design Shark International | From Thread to Technology">
-    <meta property="og:description" content="Revolutionizing African fashion through technology. AI body measurement, smart manufacturing, and fashion education across Africa.">
-    <meta property="og:image" content="https://designsharkinternational.com/images/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://designsharkinternational.com/">
-    <meta property="twitter:title" content="Design Shark International | From Thread to Technology">
-    <meta property="twitter:description" content="Revolutionizing African fashion through technology. AI body measurement, smart manufacturing, and fashion education across Africa.">
-    <meta property="twitter:image" content="https://designsharkinternational.com/images/twitter-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Design Shark International",
-      "url": "https://designsharkinternational.com",
-      "logo": "https://designsharkinternational.com/images/logo.png",
-      "description": "Revolutionizing African fashion through technology integration",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "101 Wave Avenue",
-        "addressLocality": "Ikoyi",
-        "addressRegion": "Lagos",
-        "postalCode": "104106",
-        "addressCountry": "Nigeria"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@designsharkinternational.com",
-        "contactType": "Customer Service"
-      },
-      "sameAs": [
-        "https://twitter.com/designsharkintl",
-        "https://instagram.com/designsharkintl",
-        "https://linkedin.com/company/designsharkinternational",
-        "https://youtube.com/@designsharkinternational"
-      ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <title>Design Shark International · The Infrastructure Behind African Fashion</title>
+  <meta name="description" content="We build the systems, technology, and production capacity that transform fashion creativity into real businesses, real jobs, and global competitiveness." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦈</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js">
+  </script>
+
+  <style>
+    /* ============================================================
+       DESIGN SHARK · BLENDED EDITION
+       V1 polish + V2 multi‑page SPA + business depth
+       ============================================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    </script>
-    
-    <!-- External Resources -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    
-    <!-- Preload Critical Images -->
-    <link rel="preload" href="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/0.png" as="image">
-    <link rel="preload" href="https://plus.unsplash.com/premium_photo-1689606092582-33dece0724b7" as="image">
+    :root {
+      --font-heading: 'DM Sans', 'Inter', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --white: #FFFFFF;
+      --black: #0A0A0A;
+      --gray-50: #FAFAFA;
+      --gray-100: #F5F5F5;
+      --gray-200: #E5E5E5;
+      --gray-300: #D4D4D4;
+      --gray-400: #A3A3A3;
+      --gray-500: #737373;
+      --gray-600: #525252;
+      --gray-700: #404040;
+      --gray-800: #262626;
+      --gray-900: #171717;
+      --navy: #0a1628;
+      --navy-light: #1a2a4a;
+      --navy-dim: rgba(10, 22, 40, 0.06);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+      --radius: 10px;
+      --radius-xl: 14px;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--gray-900);
+      line-height: 1.6;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    /* ===== SCROLL PROGRESS ===== */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.04);
+      z-index: 1001;
+    }
+    .scroll-progress-bar {
+      height: 100%;
+      background: var(--navy);
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--navy);
+      border: none;
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: var(--navy-light);
+      transform: translateY(-3px);
+    }
+
+    /* ===== NAV ===== */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      z-index: 1000;
+      mix-blend-mode: difference;
+      color: var(--white);
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+    .main-nav.scrolled {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      mix-blend-mode: normal;
+      color: var(--gray-900);
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+    }
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+    .nav-logo i {
+      font-size: 1rem;
+    }
+    .nav-links {
+      display: none;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+    .nav-link {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: var(--font-body);
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.4s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-waitlist-link {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      font-family: var(--font-body);
+    }
+    .nav-waitlist-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.4s ease;
+    }
+    .nav-waitlist-link:hover::after {
+      width: 100%;
+    }
+    .nav-waitlist-link .navy {
+      color: var(--navy);
+    }
+    .main-nav.scrolled .nav-waitlist-link .navy {
+      color: var(--navy);
+    }
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: inherit;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    /* Mobile overlay */
+    .mobile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--white);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+    }
+    .mobile-overlay.active {
+      transform: translateX(0);
+    }
+    .mobile-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--gray-900);
+      cursor: pointer;
+    }
+    .mobile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .mobile-links button,
+    .mobile-links a {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--gray-900);
+      text-decoration: none;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 3rem;
+      }
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      section {
+        padding: 8rem 0;
+      }
+    }
+    .section-alt {
+      background: var(--gray-50);
+    }
+    .section-dark {
+      background: var(--gray-900);
+      color: var(--white);
+    }
+    .section-dark .text-muted {
+      color: var(--gray-400);
+    }
+
+    /* ===== REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+    .reveal-delay-5 {
+      transition-delay: 0.5s;
+    }
+    .reveal-delay-6 {
+      transition-delay: 0.6s;
+    }
+    .reveal-delay-7 {
+      transition-delay: 0.7s;
+    }
+    .reveal-delay-8 {
+      transition-delay: 0.8s;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .display-large {
+      font-family: var(--font-heading);
+      font-size: clamp(2.8rem, 10vw, 6rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .display-medium {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .display-small {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .body-large {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--gray-600);
+    }
+    .caption {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    .text-muted {
+      color: var(--gray-500);
+    }
+    .text-navy {
+      color: var(--navy);
+    }
+
+    /* ===== BUTTONS ===== */
+    .pill-btn {
+      display: inline-block;
+      padding: 0.5rem 1.8rem;
+      border-radius: 50px;
+      border: 1px solid var(--navy);
+      background: transparent;
+      color: var(--navy);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .pill-btn:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .pill-btn.white {
+      border-color: var(--white);
+      color: var(--white);
+    }
+    .pill-btn.white:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+    .pill-btn.dark {
+      border-color: var(--gray-900);
+      color: var(--gray-900);
+    }
+    .pill-btn.dark:hover {
+      background: var(--gray-900);
+      color: var(--white);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 6rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .hero-line {
+      display: block;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    .hero .hero-line:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .hero .hero-line:nth-child(2) {
+      animation-delay: 0.8s;
+    }
+    .hero .hero-line:nth-child(3) {
+      animation-delay: 1.4s;
+      font-weight: 700;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-cta {
+      margin-top: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 2s forwards;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      border: 1px solid var(--gray-700);
+      padding: 0.15rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.1s forwards;
+    }
+
+    /* ===== PILLARS GRID ===== */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--gray-200);
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .pillars-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .pillar {
+      background: var(--white);
+      padding: 2rem;
+      transition: background 0.3s ease;
+    }
+    @media (min-width: 768px) {
+      .pillar {
+        padding: 3rem;
+      }
+    }
+    .pillar:hover {
+      background: var(--gray-50);
+    }
+    .pillar .icon {
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .pillar h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .pillar p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+    .pillar .pillar-cta {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      position: relative;
+    }
+    .pillar .pillar-cta::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--navy);
+      transition: width 0.4s ease;
+    }
+    .pillar .pillar-cta:hover::after {
+      width: 100%;
+    }
+
+    /* ===== FACTORY TIERS ===== */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .tier-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .tier-card {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+    }
+    .tier-card .tag {
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      margin-bottom: 0.5rem;
+    }
+    .tier-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .tier-card p {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+    }
+
+    /* ===== MEZER FEATURES ===== */
+    .mezer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .mezer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .mezer-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .mezer-features .item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+    .mezer-features .item i {
+      color: var(--navy);
+      width: 1.2rem;
+    }
+    .mezer-visual {
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      position: relative;
+    }
+    .mezer-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mezer-visual .overlay-icon {
+      position: absolute;
+      font-size: 3rem;
+      color: var(--navy);
+      opacity: 0.15;
+    }
+
+    /* ===== TOOLS GRID ===== */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .tools-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.3s ease;
+    }
+    .tool-card:hover {
+      border-color: var(--navy);
+    }
+    .tool-card .icon {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .tool-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .tool-card p {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+
+    /* ===== STATS ===== */
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 700px) {
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+    }
+    .stat-item .number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .stat-item .label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===== CHART ===== */
+    .chart-box {
+      height: 140px;
+      position: relative;
+    }
+    .chart-box canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* ===== TEAM ===== */
+    .team-tabs {
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem 0 1.5rem;
+      flex-wrap: wrap;
+    }
+    .team-tabs .tab-button {
+      background: none;
+      border: none;
+      color: var(--gray-500);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+    .team-tabs .tab-button.active {
+      color: var(--gray-900);
+      border-bottom-color: var(--navy);
+    }
+    .team-tabs .tab-button:hover {
+      color: var(--gray-900);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .team-card {
+      text-align: center;
+      padding: 0.8rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      transition: border-color 0.3s ease;
+    }
+    .team-card:hover {
+      border-color: var(--navy);
+    }
+    .team-card .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 0.6rem;
+      overflow: hidden;
+      border: 2px solid var(--gray-200);
+    }
+    .team-card .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .team-card .name {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .team-card .role {
+      font-size: 0.6rem;
+      color: var(--gray-500);
+    }
+    .advisors-note {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--gray-200);
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+
+    /* ===== SOLUTIONS PAGE ===== */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .solutions-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .solution-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      transition: border-color 0.3s ease;
+    }
+    .solution-card:hover {
+      border-color: var(--navy);
+    }
+    .solution-card .solution-icon {
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .solution-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-family: var(--font-heading);
+    }
+    .solution-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+    .solution-card ul {
+      list-style: none;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+    .solution-card ul li {
+      padding: 0.2rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .solution-card ul li::before {
+      content: "▹";
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .apply-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    .apply-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .apply-form .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .apply-form label {
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .apply-form input,
+    .apply-form textarea,
+    .apply-form select {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      color: var(--gray-900);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .apply-form input:focus,
+    .apply-form textarea:focus,
+    .apply-form select:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px var(--navy-dim);
+    }
+    .apply-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .apply-form .submit-row {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* ===== INVESTORS ===== */
+    .investor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .investor-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .investor-card {
+      background: var(--gray-50);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+    }
+    .investor-card .number {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      font-family: var(--font-heading);
+    }
+    .investor-card .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    .investor-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-top: 0.5rem;
+    }
+
+    .use-of-funds {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+    }
+    .use-of-funds h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-heading);
+    }
+    .use-of-funds .funds-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    @media (max-width: 640px) {
+      .use-of-funds .funds-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+    }
+    .use-of-funds .fund-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .use-of-funds .fund-item:last-child {
+      border-bottom: none;
+    }
+    .use-of-funds .fund-item .fund-label {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    .use-of-funds .fund-item .fund-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      font-family: var(--font-heading);
+    }
+    .use-of-funds .fund-total {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 2px solid var(--gray-300);
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .use-of-funds .fund-total .total-value {
+      color: var(--navy);
+    }
+
+    .investor-cta {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .investor-cta a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+      font-family: var(--font-body);
+      position: relative;
+    }
+    .investor-cta a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--navy);
+      transition: width 0.4s ease;
+    }
+    .investor-cta a:hover::after {
+      width: 100%;
+    }
+    .investor-cta .note {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+
+    /* ===== CASE STUDIES ===== */
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .case-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .case-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      transition: border-color 0.3s ease;
+    }
+    .case-card:hover {
+      border-color: var(--navy);
+    }
+    .case-card .case-metric {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--navy);
+      font-family: var(--font-heading);
+    }
+    .case-card .case-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    .case-card blockquote {
+      margin: 1rem 0 0;
+      padding-left: 1.2rem;
+      border-left: 3px solid var(--navy);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+
+    /* ===== WAITLIST ===== */
+    .waitlist-section {
+      background: var(--gray-50);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .waitlist-form {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 520px;
+      margin: 1.5rem auto 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .waitlist-form input {
+      flex: 1;
+      min-width: 200px;
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 50px;
+      padding: 0.7rem 1.2rem;
+      color: var(--gray-900);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .waitlist-form input:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px var(--navy-dim);
+    }
+    .waitlist-form input::placeholder {
+      color: var(--gray-400);
+    }
+    .waitlist-counter {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+    .waitlist-counter strong {
+      color: var(--navy);
+    }
+
+    /* ===== INVITATION ===== */
+    .invitation-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 640px) {
+      .invitation-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .invitation-card {
+      background: var(--gray-50);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      transition: background 0.3s ease;
+      border: 1px solid var(--gray-200);
+    }
+    .invitation-card:hover {
+      background: var(--gray-100);
+    }
+    .invitation-card .icon {
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .invitation-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-family: var(--font-heading);
+    }
+    .invitation-card p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+    }
+    .invitation-card ul {
+      list-style: none;
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+    .invitation-card ul li {
+      padding: 0.2rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .invitation-card ul li::before {
+      content: "▹";
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .invitation-card .card-cta {
+      margin-top: 1.2rem;
+    }
+
+    /* ===== IDENTITY ===== */
+    .identity {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .identity-block {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .identity-line {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 6vw, 4rem);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+      font-weight: 600;
+    }
+    .identity-line.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== PIVOT ===== */
+    .pivot {
+      padding: 5rem 0;
+      background: var(--gray-50);
+      text-align: center;
+    }
+    .pivot-line {
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      max-width: 800px;
+      margin: 0 auto;
+      letter-spacing: -0.02em;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 3rem 0 1.5rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+    .footer h4 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .footer p {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+    }
+    .footer a {
+      color: var(--gray-400);
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: var(--white);
+    }
+    .footer .footer-contact-item .label {
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    .footer .footer-contact-item .value {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+    }
+    .footer .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+    .footer .footer-social a {
+      color: var(--gray-500);
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .footer .footer-social a:hover {
+      color: var(--navy);
+    }
+    .footer .footer-waitlist-link {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    .footer .footer-waitlist-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--navy);
+      transition: width 0.4s ease;
+    }
+    .footer .footer-waitlist-link:hover::after {
+      width: 100%;
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--gray-800);
+      padding-top: 1.5rem;
+      font-size: 0.65rem;
+      color: var(--gray-500);
+      text-align: center;
+    }
+
+    /* ===== UTILITY ===== */
+    .mb-1 {
+      margin-bottom: 0.5rem;
+    }
+    .mb-2 {
+      margin-bottom: 1rem;
+    }
+    .mb-3 {
+      margin-bottom: 2rem;
+    }
+    .mt-1 {
+      margin-top: 0.5rem;
+    }
+    .mt-2 {
+      margin-top: 1rem;
+    }
+    .mt-3 {
+      margin-top: 2rem;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .max-w-600 {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .max-w-800 {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex-center {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+    .hidden {
+      display: none !important;
+    }
+
+    /* ===== PAGES WRAPPER ===== */
+    .pages-wrapper {
+      display: grid;
+    }
+    .page {
+      grid-row: 1;
+      grid-column: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0s 0.4s;
+      pointer-events: none;
+      padding-top: 6rem;
+      min-height: 100vh;
+    }
+    .page.active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s ease, visibility 0s 0s;
+      pointer-events: auto;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      section {
+        padding: 3rem 0;
+      }
+      .hero {
+        padding: 5rem 0 3rem;
+        min-height: 90vh;
+      }
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+      .mezer-features {
+        grid-template-columns: 1fr;
+      }
+      .page {
+        padding-top: 5rem;
+      }
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+      .investor-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+      .invitation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .hero .display-large {
+        font-size: 2.4rem;
+      }
+      .pillar {
+        padding: 1.2rem;
+      }
+      .tier-card {
+        padding: 1.2rem;
+      }
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+      }
+    }
+    @media print {
+      .main-nav {
+        position: relative;
+        mix-blend-mode: normal;
+        color: var(--gray-900);
+        background: white;
+      }
+      .hero {
+        min-height: auto;
+        padding: 2rem 0;
+        background: var(--gray-100);
+        color: var(--gray-900);
+      }
+      .scroll-progress,
+      .back-to-top {
+        display: none;
+      }
+      .section-dark {
+        background: var(--gray-100);
+        color: var(--gray-900);
+      }
+      .section-dark .text-muted {
+        color: var(--gray-600);
+      }
+      .tier-card {
+        background: var(--gray-50);
+        border-color: var(--gray-200);
+      }
+      .tier-card p {
+        color: var(--gray-600);
+      }
+      .footer {
+        background: var(--gray-100);
+        color: var(--gray-900);
+      }
+      .footer a {
+        color: var(--gray-900);
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Logo Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="logo-loader">
-            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/0.png" 
-                 alt="Design Shark International Logo" 
-                 class="logo-loader-img">
-            <div class="logo-loader-text">Design Shark International</div>
-        </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="navLogo">
+        <i class="fas fa-shark"></i> Design Shark
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><button class="nav-link" data-page="solutions">Solutions</button></li>
+        <li><button class="nav-link" data-page="team">Team</button></li>
+        <li><button class="nav-link" data-page="investors">Investors</button></li>
+        <li><button class="nav-link" data-page="case-studies">Case Studies</button></li>
+        <li><a href="#waitlist" class="nav-waitlist-link">Join <span class="navy">Waitlist</span></a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
     </div>
+  </nav>
 
-    <!-- Scroll Progress -->
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar" id="scrollProgress"></div>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <div class="mobile-links">
+      <button data-page="home">Home</button>
+      <button data-page="solutions">Solutions</button>
+      <button data-page="team">Team</button>
+      <button data-page="investors">Investors</button>
+      <button data-page="case-studies">Case Studies</button>
+      <a href="#waitlist">Join Waitlist</a>
     </div>
+  </div>
 
-    <!-- Navigation -->
-    <nav class="main-nav" id="mainNav">
-        <div class="site-title">Design Shark International</div>
-        <div class="nav-links">
-            <a href="#philosophy">Our Philosophy</a>
-            <a href="#initiatives">Initiatives</a>
-            <a href="#leadership">Team</a>
-            <a href="#app">Mezer App</a>
-            <a href="#contact">Contact</a>
+  <!-- ================================================================
+       PAGES WRAPPER
+  ================================================================ -->
+  <div class="pages-wrapper" id="pagesWrapper">
+
+    <!-- ========== HOME PAGE ========== -->
+    <div class="page active" id="page-home">
+
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <span class="hero-badge">Design Shark International</span>
+          <h1 class="display-large">
+            <span class="hero-line">Africa has the talent.</span>
+            <span class="hero-line">Infrastructure is what's missing.</span>
+            <span class="hero-line">We build it.</span>
+          </h1>
+          <div class="hero-cta">
+            <a href="#waitlist" class="pill-btn white">→ Join the Waitlist</a>
+          </div>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+      </section>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="mobile-nav-links">
-            <a href="#philosophy">Our Philosophy</a>
-            <a href="#initiatives">Initiatives</a>
-            <a href="#leadership">Team</a>
-            <a href="#app">Mezer App</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <!-- Opening Section -->
-    <section class="opening-section">
-        <div class="opening-content">
-            <div class="opening-poem">
-                <span class="poem-line">From thread to technology,</span>
-                <span class="poem-line">weaving Africa's fashion revolution.</span>
-            </div>
-            <a href="#contact" class="poem-cta" aria-label="Partner with Design Shark International">
-                Partner With Us
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item fade-in">
-                <div class="stat-number">1M+</div>
-                <div class="stat-label">Targeted App Downloads</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">6</div>
-                <div class="stat-label">Geopolitical Zones</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Value Chain Coverage</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="philosophy-section" id="philosophy">
-        <div class="philosophy-content">
-            <span class="section-label fade-in">Our Philosophy</span>
-            
-            <div class="philosophy-text">
-                <div class="philosophy-poem">
-                    <p class="fade-in">Traditional craftsmanship</p>
-                    <p class="fade-in">meets digital innovation—</p>
-                    <p class="fade-in">a new narrative</p>
-                    <p class="fade-in">for African fashion.</p>
-                </div>
-                
-                <div class="philosophy-description">
-                    <p class="fade-in">At Design Shark International, we are on a mission to revolutionize the fashion narrative in Nigeria and across Africa. Our comprehensive plan spans the entire value chain of the garment sector, leveraging cutting-edge technology to enhance both garment production and retail activities.</p>
-                    <p class="fade-in">We believe technology should enhance, not replace, the human touch in fashion. Our approach integrates centuries of textile wisdom with cutting-edge digital solutions, creating a sustainable fashion ecosystem that respects tradition while embracing the future.</p>
-                    <p class="fade-in">From Lagos to Nairobi, we're building the infrastructure for Africa's fashion future—where every algorithm understands the drape of fabric, every AI respects the artisan's hand, one precise measurement, one smart stitch at a time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Process Section -->
-    <section class="process-section">
-        <img src="https://plus.unsplash.com/premium_photo-1689606092582-33dece0724b7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-             alt="Smart Manufacturing Process" 
-             class="process-image" 
-             loading="lazy">
-        <div class="process-overlay"></div>
-        <div class="process-label">Smart Manufacturing Process Visualization</div>
-    </section>
-
-    <!-- Initiatives Section -->
-    <section class="initiatives-section" id="initiatives">
-        <div class="initiatives-content">
-            <span class="section-label fade-in">Our Initiatives</span>
-            
-            <div class="initiatives-grid">
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">01</div>
-                    <h3 class="initiative-title">Technology Innovation</h3>
-                    <p class="initiative-description">Q3 2024: Launching our AI Enhanced Body Measurement app, targeting 1 million downloads within the first 3 months. Ongoing: Developing a 3D Fashion Design Software Suite for designers across Africa.</p>
-                    <div class="initiative-status">Active Development</div>
-                </div>
-                
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">02</div>
-                    <h3 class="initiative-title">Smart Manufacturing</h3>
-                    <p class="initiative-description">Current Phase: Developing our business plan and negotiating for factory space. Future Phase: Establishing a smart garment factory with automated systems and AI-driven quality control.</p>
-                    <div class="initiative-status">Planning Phase</div>
-                </div>
-                
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">03</div>
-                    <h3 class="initiative-title">Fashion Designer Search</h3>
-                    <p class="initiative-description">Proof of Concept (September 2022): Held our initial accelerator program. Expansion Phase: Expanding to 6 geopolitical zones in Nigeria and recording the process as a TV series.</p>
-                    <div class="initiative-status">Expanding Nationally</div>
-                </div>
-                
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">04</div>
-                    <h3 class="initiative-title">Retail Innovation</h3>
-                    <p class="initiative-description">Development Phase: Building a high-tech e-commerce platform with AI/AR virtual try-on and size prediction technology. Creating seamless shopping experiences.</p>
-                    <div class="initiative-status">In Development</div>
-                </div>
-                
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">05</div>
-                    <h3 class="initiative-title">Faculty of Fashion</h3>
-                    <p class="initiative-description">Development Phase: Creating an online streaming platform for fashion education. Partnering with fashion schools across Africa to build capacity and skills.</p>
-                    <div class="initiative-status">In Development</div>
-                </div>
-                
-                <div class="initiative-item fade-in">
-                    <div class="initiative-number">06</div>
-                    <h3 class="initiative-title">TV Series Production</h3>
-                    <p class="initiative-description">Documenting our expansion across Nigeria's 6 geopolitical zones as a television series. Showcasing African fashion innovation and talent to a global audience.</p>
-                    <div class="initiative-status">Pre-production</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section" id="timeline">
-        <div class="timeline-content">
-            <span class="section-label fade-in">Our Journey</span>
-            
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">September 2022</div>
-                    <div class="timeline-text">Fashion Designer Search Launch – Initial accelerator program as proof of concept</div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2023 – Ongoing</div>
-                    <div class="timeline-text">3D Fashion Design Suite Development – Creating tools for digital fashion design</div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">Current Phase</div>
-                    <div class="timeline-text">Smart Factory Development – Planning Africa's first automated garment facility</div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">Q3 2024</div>
-                    <div class="timeline-text">Mezer App Launch – AI body measurement targeting 1 million downloads</div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2024 – 2025</div>
-                    <div class="timeline-text">National Expansion – Documenting across 6 zones as television series</div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2025 – Future</div>
-                    <div class="timeline-text">Pan-African Expansion – Scaling solutions across the continent</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section class="leadership-section" id="leadership">
-        <div class="leadership-content">
-            <span class="section-label fade-in">Visionaries guiding our fashion-tech revolution across Africa with expertise and innovation.</span>
-            
-            <div class="leadership-tabs fade-in">
-                <button class="tab-button active" data-tab="directors">Directors</button>
-                <button class="tab-button" data-tab="advisors">Advisors</button>
-            </div>
-            
-            <!-- Board of Directors - Horizontal Scroll -->
-            <div class="tab-content active" id="directors">
-                <div class="board-members-container">
-                    <div class="board-members-scroll" id="directorsScroll">
-                        <!-- Wole Akande -->
-                        <div class="board-member">
-                            <img src="images/team/05280933-C3A8-494D-9FE1-FF1AEA51E454.png" 
-                                 alt="Wole Akande - Chairman" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Wole Akande</h4>
-                            <div class="member-role">Chairman</div>
-                        </div>
-
-                        <!-- Sally Julcit Bawa -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/17-e1769608647210.jpg" 
-                                 alt="Sally Julcit Bawa - CEO, Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Sally Julcit Bawa</h4>
-                            <div class="member-role">CEO, Director</div>
-                        </div>
-
-                        <!-- Lulu Shabell -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/20.jpg" 
-                                 alt="Lulu Shabell - Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Lulu Shabell</h4>
-                            <div class="member-role">Director</div>
-                        </div>
-
-                        <!-- Ky Dele -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/18.jpg" 
-                                 alt="Ky Dele - Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Ky Dele</h4>
-                            <div class="member-role">Director</div>
-                        </div>
-
-                        <!-- Kelly-Ann Mostert -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/19-e1769608922573.png" 
-                                 alt="Kelly-Ann Mostert - Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Kelly-Ann Mostert</h4>
-                            <div class="member-role">Director</div>
-                        </div>
-
-                        <!-- Ibitola Turfah Adegbite -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/22-e1769609075692.png" 
-                                 alt="Ibitola Turfah Adegbite - Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Ibitola Turfah Adegbite</h4>
-                            <div class="member-role">Director</div>
-                        </div>
-                        
-                        <!-- Toyin Abiodun -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/21.jpg" 
-                                 alt="Toyin Abiodun - Director" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Toyin Abiodun</h4>
-                            <div class="member-role">Director</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Board of Advisors - Horizontal Scroll -->
-            <div class="tab-content" id="advisors">
-                <div class="board-members-container">
-                    <div class="board-members-scroll" id="advisorsScroll">
-                        <!-- Hajiya Nene Lanval -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/5.png" 
-                                 alt="Hajiya Nene Lanval - Chair" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Hajiya Nene Lanval</h4>
-                            <div class="member-role">Chair</div>
-                        </div>
-
-                        <!-- Chalya Shagaya -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/7.jpg" 
-                                 alt="Chalya Shagaya - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Chalya Shagaya</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Dolapo Adedapo -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/9.jpg" 
-                                 alt="Dolapo Adedapo - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Dolapo Adedapo</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Segun Awolowo -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/6.jpg" 
-                                 alt="Segun Awolowo - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Segun Awolowo</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-                        
-                        <!-- Toyin Adegbite-Moore -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/8.jpg" 
-                                 alt="Toyin Adegbite-Moore - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Toyin Adegbite-Moore</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Irene Eketu -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/10.jpg" 
-                                 alt="Irene Eketu - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Irene Eketu</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Bibi Olufore -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/11.jpg" 
-                                 alt="Bibi Olufore - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Bibi Olufore</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-                        
-                        <!-- Ndidi Obioha -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/12.jpg" 
-                                 alt="Ndidi Obioha - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Ndidi Obioha</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Lola Bolusire -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/13.jpg" 
-                                 alt="Lola Bolusire - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Lola Bolusire</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-                        
-                        <!-- Nareida Lobo -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/15.jpg" 
-                                 alt="Nareida Lobo - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Nareida Lobo</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-
-                        <!-- Chioma Okigbo -->
-                        <div class="board-member">
-                            <img src="https://erectmitten.s6-tastewp.com/wp-content/uploads/2026/01/14.jpg" 
-                                 alt="Chioma Okigbo - Member" class="member-avatar" loading="lazy">
-                            <h4 class="member-name">Chioma Okigbo</h4>
-                            <div class="member-role">Member</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Craft Section -->
-    <section class="craft-section" id="craft">
-        <div class="craft-content">
-            <span class="section-label fade-in">Our Solutions</span>
-            
-            <div class="craft-grid">
-                <div class="craft-item fade-in">
-                    <div class="craft-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h4 class="craft-title">Precision Measurement</h4>
-                    <p class="craft-description">AI-powered body scanning that respects individual form while ensuring perfect garment fit</p>
-                </div>
-                
-                <div class="craft-item fade-in">
-                    <div class="craft-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h4 class="craft-title">Smart Manufacturing</h4>
-                    <p class="craft-description">Automated systems that maintain artisan quality at industrial scale</p>
-                </div>
-                
-                <div class="craft-item fade-in">
-                    <div class="craft-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h4 class="craft-title">Digital Education</h4>
-                    <p class="craft-description">Preserving traditional techniques while teaching digital fashion innovation</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App Section -->
-    <section class="app-section" id="app">
-        <div class="app-content">
-            <div class="process-section">
-                <img src="https://i.pinimg.com/1200x/1e/c3/f5/1ec3f5fa9992d1e874c9c61282b5895c.jpg" 
-                     alt="Mezer App Interface on mobile devices" 
-                     class="process-image" 
-                     loading="lazy">
-                <div class="process-overlay"></div>
-                <div class="process-label">Quick and Accurate Body Measurements at your fingertips.</div>
-            </div>
-            
-            <div class="mission-content">
-                <span class="section-label fade-in">Mezer App</span>
-                
-                <div class="philosophy-description fade-in">
-                    <p>Get precise body dimensions for clothing sizes without the need of a tailor. Simplifying the measuring process for a perfect fit every time.</p>
-                </div>
-                
-                <div class="app-features">
-                    <div class="feature-item fade-in">
-                        <h4 class="feature-title">AI-Powered Scanning</h4>
-                        <p class="feature-description">Advanced algorithms for accurate body measurements using just your smartphone camera.</p>
-                    </div>
-                    
-                    <div class="feature-item fade-in">
-                        <h4 class="feature-title">Instant Results</h4>
-                        <p class="feature-description">Get measurements in seconds with your smartphone camera - no physical contact needed.</p>
-                    </div>
-                    
-                    <div class="feature-item fade-in">
-                        <h4 class="feature-title">Seamless Integration</h4>
-                        <p class="feature-description">Connect with fashion retailers for perfect-fit clothing recommendations every time.</p>
-                    </div>
-                </div>
-                
-                <div class="app-badges fade-in">
-                    <a href="https://play.google.com/store/apps/details?id=com.mezerme.mezer" target="_blank" rel="noopener noreferrer" aria-label="Download Mezer App on Google Play">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="badge">
-                    </a>
-                    <a href="https://apps.apple.com/us/app/mezer-ai-body-measurement-app/id6648770081" target="_blank" rel="noopener noreferrer" aria-label="Download Mezer App on App Store">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on App Store" class="badge">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-content">
-            <!-- Newsletter Signup -->
-            <div class="newsletter-signup fade-in">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for the latest updates on our initiatives and African fashion innovation.</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address for newsletter subscription">
-                    <button type="submit" class="newsletter-submit">Subscribe</button>
-                </form>
-            </div>
-        
-            <h2 class="contact-title fade-in">
-                <span class="poem-line">Join our mission</span>
-                <span class="poem-line">to weave technology</span>
-                <span class="poem-line">into Africa's fashion future</span>
+      <!-- Contradiction -->
+      <section id="problem">
+        <div class="container">
+          <div class="max-w-600">
+            <p class="caption">The Contradiction</p>
+            <h2 class="display-medium reveal" style="margin: 0.5rem 0 1.5rem;">
+              Talent is everywhere.<br />
+              <span class="text-navy">Scale is rare.</span>
             </h2>
-            
-            <div class="contact-info fade-in">
-                <p>101 Wave Avenue, Ikoyi-Lagos, 104106 Nigeria</p>
+            <p class="body-large reveal reveal-delay-1">
+              Designers fail not because they lack vision. But because the systems around them are broken.
+            </p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem;">
+              <div class="reveal reveal-delay-2">
+                <p style="font-size:0.8rem; font-weight:600; color:var(--gray-900);">Training is informal.</p>
+                <p style="font-size:0.85rem; color:var(--gray-600);">Skills are passed down but never standardised.</p>
+              </div>
+              <div class="reveal reveal-delay-3">
+                <p style="font-size:0.8rem; font-weight:600; color:var(--gray-900);">Production is unreliable.</p>
+                <p style="font-size:0.85rem; color:var(--gray-600);">Quality varies. Deadlines are missed.</p>
+              </div>
+              <div class="reveal reveal-delay-4">
+                <p style="font-size:0.8rem; font-weight:600; color:var(--gray-900);">Technology is absent.</p>
+                <p style="font-size:0.85rem; color:var(--gray-600);">The tools that power modern fashion are out of reach.</p>
+              </div>
+              <div class="reveal reveal-delay-5">
+                <p style="font-size:0.8rem; font-weight:600; color:var(--gray-900);">Markets are out of reach.</p>
+                <p style="font-size:0.85rem; color:var(--gray-600);">Fragmented systems make access nearly impossible.</p>
+              </div>
             </div>
-            
-            <a href="mailto:info@designsharkinternational.com" class="contact-email fade-in">info@designsharkinternational.com</a>
-            
-            <div class="social-links">
-                <a href="https://twitter.com/designsharkintl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/designsharkintl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/designsharkinternational" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://youtube.com/@designsharkinternational" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            
-            <!-- Legal Links -->
-            <div class="legal-links fade-in">
-                <a href="privacy.html" class="legal-link">Privacy Policy</a>
-                <a href="terms.html" class="legal-link">Terms of Service</a>
-                <a href="cookies.html" class="legal-link">Cookie Policy</a>
-            </div>
-            
-            <div class="copyright fade-in">
-                &copy; 2024 Design Shark International. All rights reserved.
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+      <!-- Pivot -->
+      <section class="pivot" id="realization">
+        <div class="container text-center">
+          <p class="display-medium reveal" style="max-width: 800px; margin: 0 auto;">
+            Creativity alone does not build industries.
+          </p>
+          <p class="display-medium reveal reveal-delay-2" style="color: var(--navy); max-width: 800px; margin: 0 auto;">
+            <span style="font-weight: 700;">Systems do.</span>
+          </p>
+          <div class="reveal reveal-delay-3" style="margin-top: 2rem;">
+            <p class="body-large" style="max-width: 600px; margin: 0 auto;">
+              Design Shark International exists to build the infrastructure behind fashion.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-consent" id="cookieConsent">
-        <div class="cookie-text">
-            We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept", you consent to our use of cookies. 
-            <a href="cookies.html" style="color: white; text-decoration: underline;">Learn more</a>
+      <!-- Pillars -->
+      <section id="pillars">
+        <div class="container">
+          <div class="text-center">
+            <p class="caption">The System</p>
+            <h2 class="display-small" style="margin: 0.5rem 0 1rem;">One Ecosystem. <span class="text-navy">Four Pillars.</span></h2>
+            <p class="body-large" style="max-width: 600px; margin: 0 auto 2rem;">Together, they move fashion businesses from idea to income, and from local relevance to global reach.</p>
+          </div>
+          <div class="pillars-grid">
+            <div class="pillar reveal reveal-delay-1">
+              <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Human Capital</h3>
+              <p>Skills must be standardised before scale is possible. We train fashion professionals to operate as commercial and industrial actors.</p>
+              <button class="pillar-cta" data-page="solutions">Learn more →</button>
+            </div>
+            <div class="pillar reveal reveal-delay-2">
+              <div class="icon"><i class="fas fa-microchip"></i></div>
+              <h3>Technology</h3>
+              <p>Data removes guesswork. Trust follows. We digitise the entire value chain — from measurement to delivery.</p>
+              <button class="pillar-cta" data-page="solutions">Learn more →</button>
+            </div>
+            <div class="pillar reveal reveal-delay-3">
+              <div class="icon"><i class="fas fa-industry"></i></div>
+              <h3>Manufacturing</h3>
+              <p>Production must work — every time. From first samples to export-ready volumes.</p>
+              <button class="pillar-cta" data-page="solutions">Learn more →</button>
+            </div>
+            <div class="pillar reveal reveal-delay-4">
+              <div class="icon"><i class="fas fa-globe-africa"></i></div>
+              <h3>Markets</h3>
+              <p>Demand is meaningless without access. We create pathways to income — local, regional, and global.</p>
+              <button class="pillar-cta" data-page="solutions">Learn more →</button>
+            </div>
+          </div>
         </div>
-        <div class="cookie-buttons">
-            <button class="cookie-btn" id="cookieReject">Reject</button>
-            <button class="cookie-btn accept" id="cookieAccept">Accept</button>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="section-alt" id="tools">
+        <div class="container">
+          <div class="text-center">
+            <p class="caption">The Technology Stack</p>
+            <h2 class="display-small" style="margin: 0.5rem 0 1rem;">Built for Scale. <span class="text-navy">Built for Impact.</span></h2>
+            <p class="body-large" style="max-width: 640px; margin: 0 auto 2rem;">Our integrated suite of tools digitises the entire fashion value chain — from measurement to delivery and beyond.</p>
+          </div>
+
+          <div class="stats-row reveal">
+            <div class="stat-item">
+              <div class="number">8</div>
+              <div class="label">Flagship Ateliers</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">40%</div>
+              <div class="label">Faster TAT</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">1,247+</div>
+              <div class="label">Waitlist Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">2</div>
+              <div class="label">Continents</div>
+            </div>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-card reveal reveal-delay-1">
+              <div class="icon"><i class="fas fa-user-check"></i></div>
+              <h4>Client Profiling</h4>
+              <p>Digital wardrobe, 3D body scanning, style DNA, and predictive styling.</p>
+            </div>
+            <div class="tool-card reveal reveal-delay-2">
+              <div class="icon"><i class="fas fa-route"></i></div>
+              <h4>Smart Fulfillment</h4>
+              <p>Hub‑and‑spoke routing, IoT tracking, and just‑in‑time procurement.</p>
+            </div>
+            <div class="tool-card reveal reveal-delay-3">
+              <div class="icon"><i class="fas fa-cube"></i></div>
+              <h4>Digital Atelier</h4>
+              <p>AR/VR fitting, co‑creation platform, and digital twin versioning.</p>
+            </div>
+            <div class="tool-card reveal reveal-delay-4">
+              <div class="icon"><i class="fas fa-coins"></i></div>
+              <h4>Stitch Token</h4>
+              <p>Blockchain‑based loyalty, exclusivity, and community governance.</p>
+            </div>
+            <div class="tool-card reveal reveal-delay-5">
+              <div class="icon"><i class="fas fa-brain"></i></div>
+              <h4>AI Intelligence</h4>
+              <p>Predictive analytics for fit, demand, pricing, and client retention.</p>
+            </div>
+            <div class="tool-card reveal reveal-delay-6">
+              <div class="icon"><i class="fas fa-chart-line"></i></div>
+              <h4>Analytics &amp; Insights</h4>
+              <p>Real‑time dashboards for ateliers, brands, and investors.</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-7" style="margin-top: 2rem;">
+            <div style="background:var(--white); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--gray-200);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                <span style="font-size:0.7rem; font-weight:600; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.06em;">Demand Forecasting</span>
+                <span class="text-muted" style="font-size:0.6rem;">AI‑driven insights</span>
+              </div>
+              <div class="chart-box"><canvas id="demandChart"></canvas></div>
+              <div style="margin-top:0.5rem; font-size:0.7rem; color:var(--gray-500); display:flex; gap:1rem; flex-wrap:wrap;">
+                <span><span style="display:inline-block; width:10px; height:2px; background:var(--navy); margin-right:0.3rem;"></span> Agbada</span>
+                <span><span style="display:inline-block; width:10px; height:2px; background:var(--gray-400); margin-right:0.3rem;"></span> Suit</span>
+                <span style="margin-left:auto;"><i class="fas fa-arrow-up" style="color:#16a34a;"></i> +15% projected growth</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Factory -->
+      <section class="section-dark" id="factory">
+        <div class="container">
+          <div class="max-w-600">
+            <p class="caption" style="color: var(--gray-400);">The Engine</p>
+            <h2 class="display-small reveal" style="color: var(--white); margin: 0.5rem 0 1rem;">
+              Fashion cannot scale without production that works.
+            </h2>
+            <p class="body-large reveal reveal-delay-1" style="color: var(--gray-300);">
+              And production cannot be informal. Design Shark builds manufacturing environments that work — from first samples to export-ready volumes.
+            </p>
+          </div>
+          <div class="tier-grid">
+            <div class="tier-card reveal reveal-delay-2">
+              <div class="tag">Tier 1</div>
+              <h4 style="color: var(--white);">Small-Scale Production</h4>
+              <p>Sampling, pilot runs, market testing. Designed for emerging designers and growing brands who need flexibility, speed, and low minimums.</p>
+            </div>
+            <div class="tier-card reveal reveal-delay-3">
+              <div class="tag">Tier 2</div>
+              <h4 style="color: var(--white);">Smart Garment Factory</h4>
+              <p>Export-quality, technology-enabled production at scale. High-capacity manufacturing with consistent quality control and global buyer standards.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-4" style="margin-top: 2rem; text-align: center;">
+            <button class="pillar-cta" style="color:var(--gray-300); border-color:var(--gray-600);" data-page="solutions">Explore capabilities →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mezer -->
+      <section id="mezer">
+        <div class="container">
+          <div class="mezer-grid">
+            <div>
+              <p class="caption">The Data Layer</p>
+              <h2 class="display-small" style="margin: 0.5rem 0 1rem;">Mezer</h2>
+              <p class="body-large">
+                Measurement is where fashion breaks. <span class="text-navy" style="font-weight: 600;">So we fixed it.</span>
+              </p>
+              <p style="margin: 1rem 0; color: var(--gray-600); font-size: 0.95rem;">
+                An AI-powered digital measurement platform that captures accurate body measurements using just a smartphone camera.
+              </p>
+              <div class="mezer-features">
+                <div class="item"><i class="fas fa-check"></i> Better-fitting garments</div>
+                <div class="item"><i class="fas fa-check"></i> Fewer returns</div>
+                <div class="item"><i class="fas fa-check"></i> Faster production</div>
+                <div class="item"><i class="fas fa-check"></i> Greater trust</div>
+              </div>
+              <div style="margin-top: 1.5rem;">
+                <button class="pill-btn" data-page="solutions">Learn More →</button>
+              </div>
+            </div>
+            <div class="mezer-visual">
+              <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&h=400&fit=crop&crop=center" alt="Mezer App" />
+              <div class="overlay-icon"><i class="fas fa-3d"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Identity -->
+      <section class="identity" id="identity">
+        <div class="container">
+          <div class="identity-block">
+            <div class="identity-line">Design Shark is not a project.</div>
+            <div class="identity-line">Not a phase.</div>
+            <div class="identity-line">Not a moment.</div>
+            <div class="identity-line" style="margin-top: 2rem;">It is infrastructure.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waitlist -->
+      <section class="waitlist-section" id="waitlist">
+        <div class="container">
+          <span class="caption">Early Access</span>
+          <h2 class="display-small" style="margin: 1rem 0;">Join the Waitlist</h2>
+          <p style="color: var(--gray-600); max-width: 500px; margin: 0 auto 0.5rem;">Be among the first to experience the Design Shark ecosystem. Exclusive perks for early adopters.</p>
+          <form class="waitlist-form" id="waitlistForm">
+            <label for="waitlistEmail" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Email address</label>
+            <input type="email" id="waitlistEmail" placeholder="Enter your email" required />
+            <button type="submit" class="pill-btn dark">Secure My Spot</button>
+          </form>
+          <div class="waitlist-counter">
+            <strong id="waitlistCount">1,247</strong> people have already joined.
+          </div>
+          <div style="margin-top: 0.8rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.65rem; color: var(--gray-500);">
+            <span><i class="fas fa-check-circle"></i> No spam</span>
+            <span><i class="fas fa-lock"></i> Privacy guaranteed</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Invitation -->
+      <section id="contact">
+        <div class="container">
+          <div class="invitation-grid">
+            <div class="invitation-card">
+              <div class="icon"><i class="fas fa-scroll"></i></div>
+              <h3>For Designers</h3>
+              <p>Build With Us — access training, production, technology, and markets.</p>
+              <ul>
+                <li>Standardised skill development</li>
+                <li>Smart factory & production capacity</li>
+                <li>Digital tools (3D, AI, IoT)</li>
+                <li>Market access & export pathways</li>
+              </ul>
+              <div class="card-cta">
+                <button class="pill-btn" data-page="solutions" data-scroll="apply">Apply Now</button>
+              </div>
+            </div>
+            <div class="invitation-card">
+              <div class="icon"><i class="fas fa-handshake"></i></div>
+              <h3>For Partners</h3>
+              <p>Invest In Infrastructure — investors, development partners, institutions.</p>
+              <ul>
+                <li>Equity and strategic partnerships</li>
+                <li>Co‑development of factory capacity</li>
+                <li>Technology licensing & deployment</li>
+                <li>Policy & ecosystem collaboration</li>
+              </ul>
+              <div class="card-cta">
+                <button class="pill-btn" data-page="investors">Invest With Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /home -->
+
+    <!-- ========== SOLUTIONS PAGE ========== -->
+    <div class="page" id="page-solutions">
+      <div class="container">
+        <span class="caption">Our Offerings</span>
+        <h1 class="display-small" style="margin: 0.5rem 0 1rem;">End‑to‑End Fashion Infrastructure</h1>
+        <p class="body-large" style="max-width: 640px; margin-bottom: 2rem;">From client discovery to delivery and beyond — we digitise the entire value chain.</p>
+
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-user-check"></i></div>
+            <h3>Client Profiling</h3>
+            <p>Digital wardrobe, 3D body scanning, style DNA, and predictive styling.</p>
+            <ul>
+              <li>Unified client ID</li>
+              <li>Measurement history</li>
+              <li>AI‑powered recommendations</li>
+            </ul>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-route"></i></div>
+            <h3>Smart Fulfillment</h3>
+            <p>Hub‑and‑spoke routing, IoT tracking, and just‑in‑time procurement.</p>
+            <ul>
+              <li>Faster turnaround times</li>
+              <li>Real‑time visibility</li>
+              <li>AI capacity routing</li>
+            </ul>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-3d"></i></div>
+            <h3>Digital Atelier</h3>
+            <p>AR/VR fitting, co‑creation platform, and digital twin versioning.</p>
+            <ul>
+              <li>Virtual garment preview</li>
+              <li>Co‑design with tailors</li>
+              <li>Effortless re‑orders</li>
+            </ul>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-coins"></i></div>
+            <h3>Stitch Token</h3>
+            <p>Blockchain‑based loyalty, exclusivity, and community governance.</p>
+            <ul>
+              <li>Earn via referrals and reviews</li>
+              <li>Unlock rare fabrics and events</li>
+              <li>Co‑design with master tailors</li>
+            </ul>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI Intelligence</h3>
+            <p>Predictive analytics for fit, demand, pricing, and client retention.</p>
+            <ul>
+              <li>Fit prediction</li>
+              <li>Demand forecasting</li>
+              <li>Automated insights</li>
+            </ul>
+          </div>
+          <div class="solution-card">
+            <div class="solution-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Analytics &amp; Insights</h3>
+            <p>Real‑time dashboards for ateliers, brands, and investors.</p>
+            <ul>
+              <li>KPIs and metrics</li>
+              <li>Client sentiment</li>
+              <li>Growth projections</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
+          <h3 class="display-small" style="font-size: 1.6rem; margin-bottom: 0.5rem;">The Engine Behind the Platform</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="background: var(--gray-50); padding: 1.5rem; border-radius: var(--radius); border:1px solid var(--gray-200);">
+              <div style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-500); margin-bottom: 0.5rem;">Tier 1</div>
+              <h4 style="font-size: 1.1rem; font-weight: 600;">Small-Scale Production</h4>
+              <p style="color: var(--gray-600); font-size: 0.9rem;">For emerging designers. Sampling, pilot runs, market testing.</p>
+            </div>
+            <div style="background: var(--gray-50); padding: 1.5rem; border-radius: var(--radius); border:1px solid var(--gray-200);">
+              <div style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-500); margin-bottom: 0.5rem;">Tier 2</div>
+              <h4 style="font-size: 1.1rem; font-weight: 600;">Smart Garment Factory</h4>
+              <p style="color: var(--gray-600); font-size: 0.9rem;">Export-quality, technology-enabled production at scale.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apply Section -->
+        <div class="apply-section" id="apply">
+          <span class="caption">Apply</span>
+          <h2 class="display-small" style="margin: 0.5rem 0 1rem;">Build With Us</h2>
+          <p class="body-large" style="max-width: 560px; margin-bottom: 2rem;">Designers, tailors, and fashion entrepreneurs — apply to join the Design Shark ecosystem and access training, production, technology, and markets.</p>
+          <form class="apply-form" id="applyForm">
+            <div class="form-group">
+              <label for="applyName">Full Name</label>
+              <input type="text" id="applyName" placeholder="e.g. Adeola Ogun" required>
+            </div>
+            <div class="form-group">
+              <label for="applyEmail">Email Address</label>
+              <input type="email" id="applyEmail" placeholder="adeola@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="applyPhone">Phone Number</label>
+              <input type="tel" id="applyPhone" placeholder="+234 800 123 4567">
+            </div>
+            <div class="form-group">
+              <label for="applyBrand">Brand / Studio Name</label>
+              <input type="text" id="applyBrand" placeholder="e.g. Ogun Atelier">
+            </div>
+            <div class="form-group">
+              <label for="applyStage">Current Stage</label>
+              <select id="applyStage">
+                <option value="">Select your stage...</option>
+                <option value="emerging">Emerging (0–2 years)</option>
+                <option value="growing">Growing (2–5 years)</option>
+                <option value="established">Established (5+ years)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="applyMessage">Tell us about your work and what you need</label>
+              <textarea id="applyMessage" placeholder="What kind of support are you looking for? Training, production, technology, market access?"></textarea>
+            </div>
+            <div class="submit-row">
+              <button type="submit" class="pill-btn dark">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/contact.js"></script>
+    <!-- ========== TEAM PAGE ========== -->
+    <div class="page team-page" id="page-team">
+      <div class="container">
+        <span class="caption">The Builders</span>
+        <h1 class="display-small" style="margin: 0.5rem 0 1rem;">The People Behind the Platform</h1>
+        <p class="body-large" style="max-width: 600px; margin-bottom: 2rem;">We are builders — of systems, of capacity, of futures.</p>
+
+        <div class="team-tabs">
+          <button class="tab-button active" data-tab="directors">Board of Directors</button>
+          <button class="tab-button" data-tab="advisors">Board of Advisors</button>
+        </div>
+
+        <div id="directorsGrid">
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face" alt="Wole Akande" /></div>
+              <div class="name">Wole Akande</div>
+              <div class="role">Chairman</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=160&h=160&fit=crop&crop=face" alt="Sally Julcit Bawa" /></div>
+              <div class="name">Sally Julcit Bawa</div>
+              <div class="role">CEO, Director</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&h=160&fit=crop&crop=face" alt="Lulu Shabell" /></div>
+              <div class="name">Lulu Shabell</div>
+              <div class="role">Director</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=160&h=160&fit=crop&crop=face" alt="Ky Dele" /></div>
+              <div class="name">Ky Dele</div>
+              <div class="role">Director</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=160&h=160&fit=crop&crop=face" alt="Kelly-Ann Mostert" /></div>
+              <div class="name">Kelly-Ann Mostert</div>
+              <div class="role">Director</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=160&h=160&fit=crop&crop=face" alt="Ibitola Turfah Adegbite" /></div>
+              <div class="name">Ibitola Turfah Adegbite</div>
+              <div class="role">Director</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?w=160&h=160&fit=crop&crop=face" alt="Toyin Abiodun" /></div>
+              <div class="name">Toyin Abiodun</div>
+              <div class="role">Director</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="advisorsGrid" class="hidden">
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=160&h=160&fit=crop&crop=face" alt="Hajiya Nene Lanval" /></div>
+              <div class="name">Hajiya Nene Lanval</div>
+              <div class="role">Chair</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=160&h=160&fit=crop&crop=face" alt="Chalya Shagaya" /></div>
+              <div class="name">Chalya Shagaya</div>
+              <div class="role">Member</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=160&h=160&fit=crop&crop=face" alt="Dolapo Adedapo" /></div>
+              <div class="name">Dolapo Adedapo</div>
+              <div class="role">Member</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face" alt="Segun Awolowo" /></div>
+              <div class="name">Segun Awolowo</div>
+              <div class="role">Member</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=160&h=160&fit=crop&crop=face" alt="Toyin Adegbite-Moore" /></div>
+              <div class="name">Toyin Adegbite-Moore</div>
+              <div class="role">Member</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&h=160&fit=crop&crop=face" alt="Irene Eketu" /></div>
+              <div class="name">Irene Eketu</div>
+              <div class="role">Member</div>
+            </div>
+            <div class="team-card">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=160&h=160&fit=crop&crop=face" alt="Bibi Olufore" /></div>
+              <div class="name">Bibi Olufore</div>
+              <div class="role">Member</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="advisors-note">
+          <p><strong>Advisory Board Chair:</strong> Hajiya Nene Lanval</p>
+          <p style="margin-top: 0.3rem;">The Board of Advisors provides strategic guidance on policy, investment, and industry partnerships.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== INVESTORS PAGE ========== -->
+    <div class="page" id="page-investors">
+      <div class="container">
+        <span class="caption">Investment Opportunity</span>
+        <h1 class="display-small" style="margin: 0.5rem 0 1rem;">Build the Infrastructure. <span class="text-navy">Invest in the Future.</span></h1>
+        <p class="body-large" style="max-width: 640px; margin-bottom: 2rem;">Design Shark International is building the systems that African fashion needs to scale. We invite strategic partners and investors to join us.</p>
+
+        <div class="investor-grid">
+          <div class="investor-card">
+            <div class="number">$1.5M</div>
+            <div class="stat-label">Seed Round</div>
+            <p>Targeting investment to scale our technology platform, expand the smart factory, and grow our talent pipeline.</p>
+          </div>
+          <div class="investor-card">
+            <div class="number">40%</div>
+            <div class="stat-label">Faster Turnaround</div>
+            <p>Early pilot data shows significant improvement in production efficiency and client satisfaction.</p>
+          </div>
+          <div class="investor-card">
+            <div class="number">8</div>
+            <div class="stat-label">Pilot Ateliers</div>
+            <p>Flagship partners including Mai Atafo, Tiffany Amber, and Deola Sagoe are already on board.</p>
+          </div>
+          <div class="investor-card">
+            <div class="number">1,247</div>
+            <div class="stat-label">Waitlist Members</div>
+            <p>Growing demand from designers, ateliers, and clients across Nigeria and beyond.</p>
+          </div>
+        </div>
+
+        <div class="use-of-funds">
+          <h3>Use of Funds</h3>
+          <div class="funds-grid">
+            <div class="fund-item">
+              <span class="fund-label">Product Development</span>
+              <span class="fund-value">40%</span>
+            </div>
+            <div class="fund-item">
+              <span class="fund-label">Talent Acquisition</span>
+              <span class="fund-value">30%</span>
+            </div>
+            <div class="fund-item">
+              <span class="fund-label">Marketing & Partnerships</span>
+              <span class="fund-value">20%</span>
+            </div>
+            <div class="fund-item">
+              <span class="fund-label">Operations</span>
+              <span class="fund-value">10%</span>
+            </div>
+          </div>
+          <div class="fund-total">
+            <span class="total-label">Total</span>
+            <span class="total-value">100%</span>
+          </div>
+        </div>
+
+        <div class="investor-cta">
+          <a href="mailto:info@designsharkinternational.com"><i class="fas fa-envelope"></i> Request Investor Deck</a>
+          <div class="note">All inquiries treated with confidentiality.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CASE STUDIES PAGE ========== -->
+    <div class="page" id="page-case-studies">
+      <div class="container">
+        <span class="caption">Proof of Impact</span>
+        <h1 class="display-small" style="margin: 0.5rem 0 1rem;">Case Studies</h1>
+        <p class="body-large" style="max-width: 640px; margin-bottom: 2rem;">Real results from our pilot program with leading Nigerian fashion houses.</p>
+
+        <div class="case-grid">
+          <div class="case-card">
+            <div class="case-metric">-45%</div>
+            <div class="case-label">Transaction Turnaround</div>
+            <p style="margin-top: 0.5rem; color: var(--gray-600); font-size: 0.9rem;">Reduced deal cycle from 120 days to 65 days for pilot partners.</p>
+            <blockquote>"Our production timeline has been cut by nearly half. The system actually works."</blockquote>
+          </div>
+          <div class="case-card">
+            <div class="case-metric">-70%</div>
+            <div class="case-label">Document Errors</div>
+            <p style="margin-top: 0.5rem; color: var(--gray-600); font-size: 0.9rem;">Digital measurement and routing have dramatically reduced manual errors.</p>
+            <blockquote>"We used to lose 1 in 4 orders to measurement mistakes. Now it's nearly zero."</blockquote>
+          </div>
+          <div class="case-card">
+            <div class="case-metric">+32%</div>
+            <div class="case-label">Client Satisfaction</div>
+            <p style="margin-top: 0.5rem; color: var(--gray-600); font-size: 0.9rem;">Clients report significantly higher satisfaction with fit and delivery.</p>
+            <blockquote>"My clients keep coming back. They trust the process now."</blockquote>
+          </div>
+          <div class="case-card">
+            <div class="case-metric">+28%</div>
+            <div class="case-label">Conversion Rate</div>
+            <p style="margin-top: 0.5rem; color: var(--gray-600); font-size: 0.9rem;">Better fitting garments lead to higher repeat purchase rates.</p>
+            <blockquote>"Sales are up. Returns are down. It's a game changer."</blockquote>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--gray-50); border-radius: var(--radius); border:1px solid var(--gray-200); text-align: center;">
+          <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Pilot Partners</h3>
+          <p style="color: var(--gray-600);">Mai Atafo · Tiffany Amber · Deola Sagoe · Orange Culture · Lisa Folawiyo</p>
+          <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray-500);">8 flagship ateliers · 127 active clients · 342 orders fulfilled</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /pages-wrapper -->
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">
+            Design Shark International
+          </h3>
+          <p>Building the infrastructure Africa's fashion industry needs to scale.</p>
+          <p style="margin-top: 0.5rem;"><a href="#waitlist" class="footer-waitlist-link">→ Join the Waitlist</a></p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <div class="footer-contact-item">
+            <div class="value">9b Crown Court Estate 1, Oniru<br />Victoria Island, Lagos, Nigeria</div>
+          </div>
+          <div class="footer-contact-item" style="margin-top: 0.8rem;">
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:info@designsharkinternational.com">info@designsharkinternational.com</a></div>
+          </div>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div style="margin-top: 1rem; font-size: 0.7rem; color: var(--gray-500);">
+            <i class="fas fa-shield"></i> NDPR · GDPR
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Design Shark International. All rights reserved. · Registered Nigeria &amp; Norway</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       JAVASCRIPT
+  ================================================================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ---- SCROLL PROGRESS & NAV ----
+      const progressBar = document.getElementById('scrollProgress');
+      const nav = document.getElementById('mainNav');
+      const backToTop = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+
+        if (winScroll > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+
+        if (winScroll > 500) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ---- REVEAL ON SCROLL ----
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // ---- IDENTITY LINES ----
+      const identityLines = document.querySelectorAll('.identity-line');
+      const identityObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.4 });
+      identityLines.forEach(line => identityObserver.observe(line));
+
+      // ---- MOBILE MENU ----
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const overlay = document.getElementById('mobileOverlay');
+      const closeBtn = document.getElementById('mobileClose');
+
+      menuBtn.addEventListener('click', function() {
+        overlay.classList.add('active');
+      });
+      closeBtn.addEventListener('click', function() {
+        overlay.classList.remove('active');
+      });
+      overlay.querySelectorAll('button, a').forEach(el => {
+        el.addEventListener('click', function() {
+          overlay.classList.remove('active');
+        });
+      });
+
+      // ---- PAGE ROUTING ----
+      const pages = {
+        home: document.getElementById('page-home'),
+        solutions: document.getElementById('page-solutions'),
+        team: document.getElementById('page-team'),
+        investors: document.getElementById('page-investors'),
+        'case-studies': document.getElementById('page-case-studies')
+      };
+      const navLinks = document.querySelectorAll('.nav-link');
+      let scrollTarget = null;
+
+      function navigateTo(pageId, scrollToId) {
+        // hide all pages
+        Object.values(pages).forEach(p => p.classList.remove('active'));
+
+        if (pages[pageId]) {
+          pages[pageId].classList.add('active');
+          // update nav active state
+          navLinks.forEach(l => l.classList.remove('active'));
+          document.querySelector(`.nav-link[data-page="${pageId}"]`)?.classList.add('active');
+
+          if (scrollToId) {
+            scrollTarget = scrollToId;
+          }
+        }
+        overlay.classList.remove('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (scrollTarget) {
+          setTimeout(() => {
+            const targetEl = document.getElementById(scrollTarget);
+            if (targetEl) {
+              const navHeight = nav.offsetHeight;
+              const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+              window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            }
+            scrollTarget = null;
+          }, 400);
+        }
+      }
+
+      // ---- data-page click listeners ----
+      document.querySelectorAll('[data-page]').forEach(el => {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          const page = this.dataset.page;
+          const scroll = this.dataset.scroll || null;
+          if (page && pages[page]) {
+            navigateTo(page, scroll);
+          }
+        });
+      });
+
+      // ---- home logo ----
+      document.getElementById('navLogo').addEventListener('click', function(e) {
+        e.preventDefault();
+        navigateTo('home');
+      });
+
+      // ---- waitlist link from nav / footer (stays on home) ----
+      document.querySelectorAll('a[href="#waitlist"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const currentPage = document.querySelector('.page.active');
+          if (currentPage && currentPage.id !== 'page-home') {
+            navigateTo('home', 'waitlist');
+          } else {
+            const target = document.getElementById('waitlist');
+            if (target) {
+              const navHeight = nav.offsetHeight;
+              const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+              window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            }
+          }
+        });
+      });
+
+      // ---- TEAM TABS ----
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const directorsGrid = document.getElementById('directorsGrid');
+      const advisorsGrid = document.getElementById('advisorsGrid');
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          tabButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          if (this.dataset.tab === 'directors') {
+            directorsGrid.classList.remove('hidden');
+            advisorsGrid.classList.add('hidden');
+          } else {
+            directorsGrid.classList.add('hidden');
+            advisorsGrid.classList.remove('hidden');
+          }
+        });
+      });
+
+      // ---- WAITLIST FORM ----
+      const waitlistForm = document.getElementById('waitlistForm');
+      const waitlistCount = document.getElementById('waitlistCount');
+
+      waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('waitlistEmail').value.trim();
+        if (!email || !email.includes('@')) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        const current = parseInt(waitlistCount.textContent.replace(/,/g, ''));
+        const newCount = (current + 1).toLocaleString();
+        waitlistCount.textContent = newCount;
+        alert('You\'re on the waitlist! Welcome to Design Shark.');
+        this.reset();
+      });
+
+      // ---- APPLY FORM ----
+      const applyForm = document.getElementById('applyForm');
+      applyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('applyName').value.trim();
+        const email = document.getElementById('applyEmail').value.trim();
+        if (!name || !email) {
+          alert('Please fill in your name and email.');
+          return;
+        }
+        alert('Application submitted! We\'ll be in touch within 48 hours.');
+        this.reset();
+      });
+
+      // ---- DEMAND CHART ----
+      const ctx = document.getElementById('demandChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            label: 'Agbada',
+            data: [12, 18, 15, 22, 28, 34],
+            borderColor: '#0a1628',
+            backgroundColor: 'rgba(10,22,40,0.04)',
+            tension: 0.3,
+            fill: true,
+            pointRadius: 3,
+            pointBackgroundColor: '#0a1628'
+          }, {
+            label: 'Suit',
+            data: [8, 10, 12, 14, 16, 20],
+            borderColor: '#a3a3a3',
+            backgroundColor: 'rgba(163,163,163,0.04)',
+            tension: 0.3,
+            fill: true,
+            pointRadius: 3,
+            pointBackgroundColor: '#a3a3a3'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { color: '#a3a3a3', font: { size: 9 } },
+              grid: { color: 'rgba(0,0,0,0.05)' }
+            },
+            x: {
+              ticks: { color: '#a3a3a3', font: { size: 9 } },
+              grid: { display: false }
+            }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          }
+        }
+      });
+
+    })();
+  </script>
+
 </body>
 </html>
